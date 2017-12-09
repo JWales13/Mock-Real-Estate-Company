@@ -11,7 +11,7 @@ router.get('/', function(req, res){
         } else {
             res.send(data);
         }
-    });
+    }).sort( { rent: +1 });
 });
 
 

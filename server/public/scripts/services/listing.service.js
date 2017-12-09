@@ -7,7 +7,6 @@ app.service('ListingService',['$http', function($http){
             method: 'GET',
             url: '/listing'
         }).then(function(response){
-            console.log(response.data);
             self.listings.list = response.data;
         })
     }

@@ -11,6 +11,6 @@ app.config(function($routeProvider){
         templateUrl: '/views/rentals.html',
         controller: 'RentalController as vm'
     }).otherwise({
-        template: '<h1>404 THIS IS WRONG GET OUT OF HERE 404</h1>'
+        template: '<h1>404</h1>'
     });
 });

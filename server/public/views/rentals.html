@@ -2,7 +2,7 @@
 <h1>Properties For Rent</h1>
 
 <div>
-    <table>
+    <table class="table table-bordered">
         <thead>
             <tr>
                 <th>Property Id</th>
@@ -14,7 +14,7 @@
         <tbody>
             <tr ng-repeat="rental in vm.rentals.list" >
                 <td> {{rental._id}} </td>
-                <td> {{rental.rent}} </td>
+                <td> {{rental.rent | currency: "$" : 0}} </td>
                 <td> {{rental.city}} </td>
             </tr>
         </tbody>

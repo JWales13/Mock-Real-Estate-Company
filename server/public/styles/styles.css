@@ -1,0 +1,31 @@
+h1 {
+    font-family: Courier New, Courier, monospace;
+    color: #3672f4;
+}
+
+p{
+    font-family: Courier New, Courier, monospace;
+    color: #3672f4;
+}
+
+a:link, a:visited {
+    background-color: #3672f4;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+a:hover, a:active {
+    background-color: #5989f0;
+}
+
+table{
+    color: #2154b9;
+}
+
+img {
+    zoom: 30%
+}

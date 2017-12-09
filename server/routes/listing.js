@@ -15,6 +15,18 @@ router.get('/', function(req, res){
 });
 
 
+router.post('/', function(req, res){
+    // a get request for all games
+    var addProperty = new Listing(req.body);
 
+    addProperty.save(function(errorMakingDatabaseQuery, data){
+        if (errorMakingDatabaseQuery) {
+            console.log('error with game save', errorMakingDatabaseQuery);
+            res.sendStatus(500);
+        } else {
+            res.sendStatus(201);
+        }
+    });
+});
 
 module.exports = router;

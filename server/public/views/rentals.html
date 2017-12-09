@@ -1,22 +1,40 @@
+<div class="container">
+    <div class="col-md-6">
+        <h1>Properties For Rent</h1>
+    </div>
+    <div class="col-md-6">
+        <h3>Add New Rental Property</h3>
+        <input type: "number" ng-model="vm.newProperty.rent" placeholder="Monthly Rent">
+        <input type: "number" ng-model="vm.newProperty.sqft" placeholder="Square Feet">
+        <input type="text" ng-model="vm.newProperty.city" placeholder="City">
+        <button ng-click="vm.addProperty(vm.newProperty)">Submit</button>
+    </div>
+    </br>
+    <hr>
+    </br>
+    </br>
+    </br>
+    </br>
 
-<h1>Properties For Rent</h1>
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Property Id</th>
+                    <th>Square Feet</th>
+                    <th>Monthly Rent</th>
+                    <th>City</th>
+                </tr>
+            </thead>
 
-<div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
-                <th>Property Id</th>
-                <th>Cost per Month</th>
-                <th>City</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr ng-repeat="rental in vm.rentals.list" >
-                <td> {{rental._id}} </td>
-                <td> {{rental.rent | currency: "$" : 0}} </td>
-                <td> {{rental.city}} </td>
-            </tr>
-        </tbody>
-    </table>
+            <tbody>
+                <tr ng-repeat="rental in vm.rentals.list">
+                    <td> {{rental._id}} </td>
+                    <td> {{rental.sqft}} </td>
+                    <td> {{rental.rent | currency: "$" : 0}} </td>
+                    <td> {{rental.city}} </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

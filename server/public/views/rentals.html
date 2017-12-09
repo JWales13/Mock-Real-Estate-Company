@@ -1,0 +1,22 @@
+
+<h1>Properties For Rent</h1>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Property Id</th>
+                <th>Cost per Month</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr ng-repeat="rental in vm.rentals.list" >
+                <td> {{rental._id}} </td>
+                <td> {{rental.rent}} </td>
+                <td> {{rental.city}} </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

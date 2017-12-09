@@ -4,5 +4,6 @@ app.controller('RentalController', ['RentalService', function (RentalService) {
     self.rentals = RentalService.rentals;
     self.addProperty = RentalService.addProperty;
     self.newProperty = RentalService.newProperty;
+    self.deleteThis = RentalService.deleteThis;
     RentalService.getCollections();
 }]);

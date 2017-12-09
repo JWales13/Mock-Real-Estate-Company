@@ -2,6 +2,7 @@ app.service('RentalService',['$http', function($http){
     var self = this;
     self.rentals = { list: [] };
     self.newProperty = {};
+
     
 
     self.getCollections = function(){
@@ -14,18 +15,27 @@ app.service('RentalService',['$http', function($http){
     }
 
     self.addProperty = function(newProperty){
-        console.log('button clicked: ', newProperty);
         $http({
             method: 'POST',
             url: '/rental',
             data: newProperty
         }).then(function(response){
-            self.newProperty.cost = '';
+            self.newProperty.rent = '';
+            self.newProperty.sqft = '';
             self.newProperty.city = '';
-            console.log(response);
             self.getCollections();
         })//end .then
     };//end addProperty
+
+    self.deleteThis = function(property){
+        $http({
+            method: 'DELETE',
+            url: '/rental/' + property._id,
+            data: property
+        }).then(function(response){
+            self.getCollections();
+        })//end .then
+    };//end delete
 
 
 

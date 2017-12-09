@@ -16,18 +16,28 @@ app.service('ListingService',['$http', function($http){
 
 
     self.addProperty = function(newProperty){
-        console.log('button clicked: ', newProperty);
         $http({
             method: 'POST',
             url: '/listing',
             data: newProperty
         }).then(function(response){
             self.newProperty.cost = '';
+            self.newProperty.sqft = '';
             self.newProperty.city = '';
-            console.log(response);
             self.getCollections();
         })//end .then
     };//end addProperty
+
+    
+    self.deleteThis = function(property){
+        $http({
+            method: 'DELETE',
+            url: '/listing/' + property._id,
+            data: property
+        }).then(function(response){
+            self.getCollections();
+        })//end .then
+    };//end delete
 
 
 }]);  

@@ -24,6 +24,7 @@
                     <th>Square Feet</th>
                     <th>Monthly Rent</th>
                     <th>City</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
 
@@ -33,6 +34,11 @@
                     <td> {{rental.sqft}} </td>
                     <td> {{rental.rent | currency: "$" : 0}} </td>
                     <td> {{rental.city}} </td>
+                    <td> 
+                        <button ng-click="vm.deleteThis(rental)">
+                                <span class="glyphicon glyphicon-trash"></span>
+                        </button>  
+                    </td>
                 </tr>
             </tbody>
         </table>

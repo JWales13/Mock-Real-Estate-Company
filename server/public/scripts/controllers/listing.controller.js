@@ -4,5 +4,6 @@ app.controller('ListingController', ['ListingService', function (ListingService)
     self.listings = ListingService.listings;
     self.addProperty = ListingService.addProperty;
     self.newProperty = ListingService.newProperty;
+    self.deleteThis = ListingService.deleteThis;
     ListingService.getCollections();
 }]);

@@ -18,7 +18,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Property Id</th>
                 <th>Square Feet</th>
                 <th>Asking Price</th>
                 <th>City</th>
@@ -27,7 +26,6 @@
         </thead>
         <tbody>
             <tr ng-repeat="listing in vm.listings.list" >
-                <td> {{listing._id}} </td>
                 <td> {{listing.sqft}} </td>
                 <td> {{listing.cost | currency: "$" : 0}} </td>
                 <td> {{listing.city}} </td>

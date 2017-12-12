@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var rental = require('./routes/rental');
 var listing = require('./routes/listing');
-var mongooseConnection = require('./modules/mongoose.connection');
+require('./modules/mongoose.connection');
 
 
 var app = express();
@@ -12,7 +12,7 @@ app.use(express.static('server/public'));
 app.use(bodyParser.json()); // needed for angular requests
 
 /** ---------- DATABASE CONNECTION ---------- **/
-mongooseConnection.connect(); // module to spin up mongoose
+ // module to spin up mongoose
 
 /** ---------- EXPRESS ROUTES ---------- **/
 
